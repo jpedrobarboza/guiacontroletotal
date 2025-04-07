@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GUIA CONTROLE TOTAL</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #f1c40f;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+    .headline {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+      color: #f1c40f;
+    }
+    .impact {
+      font-size: 1.3em;
+      margin-bottom: 30px;
+      color: #fff;
+      font-weight: bold;
+    }
+    .image {
+      max-width: 100%;
+      margin: 30px 0;
+      border: 2px solid #f1c40f;
+    }
+    .cta-btn {
+      background: #ff0000;
+      color: #fff;
+      padding: 20px 40px;
+      text-decoration: none;
+      font-size: 1.6em;
+      border-radius: 5px;
+      transition: 0.3s;
+      display: inline-block;
+    }
+    .cta-btn:hover {
+      background: #c0392b;
+    }
+    .urgency {
+      margin-top: 20px;
+      font-size: 1.1em;
+      color: #ff0000;
+      font-weight: bold;
+    }
+    .timer {
+      font-size: 2em;
+      margin-top: 10px;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="headline">GUIA CONTROLE TOTAL</h1>
+    <p class="impact">A diferença entre quem MAND* e quem se FODE tá nesse guia.<br>Você decide onde quer ficar, porra.</p>
+    
+    <img src="CGT.png" alt="Guia Controle Total" class="image" />
+
+    <a href="https://pay.kirvano.com/89c039c7-765b-475d-bc49-bb6ad3f9ae41" class="cta-btn" target="_blank">
+      COMPRAR AGORA
+    </a>
+
+    <p class="urgency">⚠️ Restam apenas <span id="stock">7</span> unidades. Promoção expira em:</p>
+    <div class="timer" id="countdown">00:15:00</div>
+  </div>
+
+  <!-- SCRIPT DE ESCASSEZ E URGÊNCIA -->
+  <script>
+    // Timer de 15 minutos
+    let time = 15 * 60;
+    const countdown = document.getElementById('countdown');
+    const interval = setInterval(() => {
+      const minutes = Math.floor(time / 60);
+      const seconds = time % 60;
+      countdown.textContent = `${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
+      time--;
+      if (time < 0) clearInterval(interval);
+    }, 1000);
+  </script>
+
+</body>
+</html>
+CGT.png
